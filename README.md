@@ -1,2 +1,2 @@
-# special_k
+# special-k
 Safe serialization of ML models
