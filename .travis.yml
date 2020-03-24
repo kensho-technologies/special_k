@@ -5,7 +5,7 @@ before_install:
   - sudo apt-get -y install gnupg2 libgpgme-dev swig
 install:
   - pip install --upgrade poetry
-  - poetry install --extras "torch"
+  - poetry install
 matrix:
   include:
   - name: "Lint and static analysis"
