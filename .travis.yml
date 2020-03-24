@@ -1,19 +1,17 @@
 language: python
 install:
-  - pip install --upgrade pip
-  - pip install --upgrade setuptools pipenv
-  - pipenv install --dev --deploy --system
-  - pipenv install --system --skip-lock -e .
+  - pip install --upgrade poetry
+  - poetry install
 matrix:
   include:
   - name: "Lint and static analysis"
     python: 3.6
     script:
-      - pipenv run ./scripts/copyright_line_check.sh
-      - pipenv run black -l 100 --check .
-      - pipenv run flake8 --config setup.cfg . d
-      - pipenv run isort --check --settings-path setup.cfg -rc .
+      - poetry run ./scripts/copyright_line_check.sh
+      - poetry run black --check --config pyproject.toml .
+      - poetry run flake8 --config setup.cfg . d
+      - poetry run isort --check --settings-path setup.cfg -rc .
   - name: "Unit Tests"
     python: 3.6
     script:
-      - pipenv run python -m pytest .
+      - poetry run python -m pytest .
