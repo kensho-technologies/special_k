@@ -1,8 +1,4 @@
 # Copyright 2020-present Kensho Technologies, LLC.
-__name__ = "special_k"
-__version__ = "0.1.0"
-
-
 from .api import (  # noqa isort:skip
     load_model_from_tarball,  # noqa
     load_model_from_tarball_stream,  # noqa
