@@ -5,17 +5,20 @@ before_install:
   - sudo apt-get -y install gnupg2 libgpgme-dev swig
 install:
   - pip install --upgrade poetry
-  - poetry install --extras "torch"
 matrix:
   include:
   - name: "Lint and static analysis"
     python: 3.8
     script:
+      - poetry install
       - poetry run ./scripts/copyright_line_check.sh
       - poetry run black --check --config pyproject.toml .
       - poetry run flake8 --config setup.cfg . d
       - poetry run isort --check --settings-path setup.cfg -rc .
+      - poetry run pydocstyle config=setup.cfg .
+      - poetry run pylint --rcfile=.pylintrc .
   - name: "Unit Tests"
     python: 3.6
     script:
+      - poetry install --extras "torch"
       - poetry run python -m pytest .
