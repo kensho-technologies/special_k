@@ -1,4 +1,5 @@
 language: python
+dist: bionic
 before_install:
   - sudo apt-get update
   - sudo apt-get -y install gnupg2 libgpgme-dev swig
