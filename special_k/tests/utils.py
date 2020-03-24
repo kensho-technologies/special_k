@@ -1,3 +1,4 @@
+# Copyright 2020-present Kensho Technologies, LLC.
 import contextlib
 import os
 import shutil

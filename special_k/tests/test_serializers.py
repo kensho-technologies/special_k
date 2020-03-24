@@ -7,6 +7,7 @@ from numpy.testing import assert_allclose
 from tensorflow.keras import losses, metrics, optimizers
 from tensorflow.keras.layers import Dense, Input
 from tensorflow.keras.models import Model
+
 import torch
 
 from . import SERIALIZES_JSON_DICTS

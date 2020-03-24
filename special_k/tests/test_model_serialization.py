@@ -75,7 +75,6 @@ class MockModelWithNonSerializableObject(MockModel):
 
 
 class TestModelSerialization(ModelBuildingTestCase):
-
     def test_mock_model(self):
         mock_model = MockModel("good value", None)
         self.assertEqual(mock_model.predict("Anything"), 42)
