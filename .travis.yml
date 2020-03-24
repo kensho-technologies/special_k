@@ -9,15 +9,18 @@ install:
 matrix:
   include:
   - name: "Lint and static analysis"
-    python: 3.6
+    python: 3.7
     script:
       - poetry run ./scripts/copyright_line_check.sh
       - poetry run black --check --config pyproject.toml .
       - poetry run flake8 --config setup.cfg . d
       - poetry run isort --check --settings-path setup.cfg -rc .
       - poetry run pydocstyle config=setup.cfg .
-      - poetry run pylint --rcfile=.pylintrc .
-  - name: "Unit Tests"
+  - name: "Python 3.6 Unit Tests"
+    python: 3.6
+    script:
+      - poetry run python -m pytest .
+  - name: "Python 3.7 Unit Tests"
     python: 3.7
     script:
       - poetry run python -m pytest .
