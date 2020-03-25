@@ -1,0 +1,40 @@
+[tool.poetry]
+name = "special_k"
+version = "0.1.0"
+description = "Safe serialization of ML models."
+authors = ["Mikey Shulman", "Predrag Gruevski", "Lee Bernick"]
+license = "Apache-2.0"
+
+[tool.poetry.dependencies]
+python = "^3.6"
+click = "^6.3"
+dill = ">=0.2,<0.4"
+funcy = "^1.10"
+gpg = "1.10.0"
+h5py = "^2.7.1"
+joblib = "^0.11"
+msgpack = "^0.5.6"
+numpy = "^1.10.0"
+pandas = "^0.25.3"
+torch = { version = "^1.4", optional = true }
+voluptuous = "^0.11.5"
+
+[tool.poetry.dev-dependencies]
+black = "19.10b0"
+flake8 = "^3.7"
+isort = "^4.3"
+pydocstyle = "^5.0"
+pytest = "^5.3"
+tensorflow = "^1.2"
+torch = "^1.4"
+
+[tool.poetry.extras]
+torch = ["torch"]
+
+[tool.black]
+line-length = 100
+exclude = '(.*_pb2.*|/(\.eggs|\.git|\.hg|\.mypy_cache|\.nox|\.tox|\.venv|_build|buck-out|build|dist)/)'
+
+[build-system]
+requires = ["poetry>=1.0.5"]
+build-backend = "poetry.masonry.api"

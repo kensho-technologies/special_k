@@ -1,3 +1,4 @@
+# Copyright 2020-present Kensho Technologies, LLC.
 import contextlib
 import os
 import shutil
@@ -99,6 +100,7 @@ class EnvvarCleanupTestCase(unittest.TestCase):
 class ModelBuildingTestCase(EnvvarCleanupTestCase):
     @classmethod
     def setUpClass(cls):
+        """Set up the class"""
         super(ModelBuildingTestCase, cls).setUpClass()
         cls.gpg_homedir = tempfile.mkdtemp()
         cls.key_passphrase = _UNSAFE_KEY_PASSPHRASE
@@ -117,6 +119,7 @@ class ModelBuildingTestCase(EnvvarCleanupTestCase):
 
     @classmethod
     def tearDownClass(cls):
+        """Tear down the class"""
         shutil.rmtree(cls.gpg_homedir, ignore_errors=True)
         super(ModelBuildingTestCase, cls).tearDownClass()
 

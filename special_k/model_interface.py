@@ -43,7 +43,7 @@ class ModelInterface(metaclass=ABCMeta):
         """Setter for metadata if it hasn't been set before.
 
         Args:
-            value can be None or a dict
+            value: None or a dict
         """
         if value is not None and not isinstance(value, dict):
             raise TypeError('Metadata has to be a dictionary or None. Got "{}"'.format(type(value)))

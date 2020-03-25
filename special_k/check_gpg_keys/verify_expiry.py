@@ -18,7 +18,7 @@ logger.setLevel(logging.INFO)
 
 
 def check_gpg_key_expiry(
-    days_warning_for_key_expiration: int = DAYS_WARNING_FOR_KEY_EXPIRATION
+    days_warning_for_key_expiration: int = DAYS_WARNING_FOR_KEY_EXPIRATION,
 ) -> bool:
     """Check key expirations
 
