@@ -1,5 +1,5 @@
 # Copyright 2020-present Kensho Technologies, LLC.
-__version__ = "0.1.0"
+__version__ = "0.1.1"
 
 from .api import (  # noqa isort:skip
     load_model_from_tarball,  # noqa

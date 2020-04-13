@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "special_k"
-version = "0.1.0"
+version = "0.1.1"
 description = "Safe serialization of ML models."
 authors = ["Mikey Shulman", "Predrag Gruevski", "Lee Bernick"]
 license = "Apache-2.0"
@@ -12,7 +12,7 @@ dill = ">=0.2,<0.4"
 funcy = "^1.10"
 gpg = "1.10.0"
 h5py = "^2.7.1"
-joblib = "^0.11"
+joblib = ">=0.11,<=0.15"
 msgpack = "^0.5.6"
 numpy = "^1.10.0"
 pandas = "^0.25.3"
