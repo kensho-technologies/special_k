@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "special_k"
-version = "0.1.0"
+version = "0.1.1"
 description = "Safe serialization of ML models."
 authors = ["Mikey Shulman", "Predrag Gruevski", "Lee Bernick"]
 license = "Apache-2.0"
