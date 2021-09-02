@@ -37,7 +37,7 @@ Your GPG key directory should contain the following files:
 - `trustdb.txt`: a file assigning levels of trust to each public key in this directory.
 You likely have a single root of trust, in which case you would have a single line in `trustdb.txt` to ultimately trust that key,
 i.e. `FINGERPRINT_OF_ULTIMATELY_TRUSTED_KEY:6:`.
-- `keyname_to_fingerprint.json`: a file mapping the names of the public keys to their fingerprints, e.g. `{ "key1.pub.asc": "FINGERPRINT_OF_KEY1" }`
+- `keyname-to-fingerprint.json`: a file mapping the names of the public keys to their fingerprints, e.g. `{ "key1.pub.asc": "FINGERPRINT_OF_KEY1" }`
 - `__init__.py`: an empty file
 
 To use this trusted keys directory with `special_k`,
